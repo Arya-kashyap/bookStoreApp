@@ -18,7 +18,11 @@ function Signup() {
                     email: data.email,
                     password: data.password,
                }
+<<<<<<< HEAD
                await axios.post("/api/user/signup", userInfo)
+=======
+               await axios.post("https://bookstoreapp-backend-bag4.onrender.com/user/signup", userInfo)
+>>>>>>> 4703428736d88240fa6d31a39682a59125861c17
                .then((res) => {
                     console.log(res.data);
                     if(res.data){

@@ -8,7 +8,11 @@ function Course() {
   useEffect(( )=>{
     const  getBook = async() => {
       try {
+<<<<<<< HEAD
         const res = await axios.get("/api/book");
+=======
+        const res = await axios.get("https://bookstoreapp-backend-bag4.onrender.com/book");
+>>>>>>> 4703428736d88240fa6d31a39682a59125861c17
         console.log(res.data);
         setBook(res.data)
       } catch (error) {
