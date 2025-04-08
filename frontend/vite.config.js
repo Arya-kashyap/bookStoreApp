@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server:{
     proxy: {
-      "/api": "http://localhost:4001",
+      "/api": "https://bookstoreapp-backend-bag4.onrender.com",
     }
   },
   plugins: [react()],
