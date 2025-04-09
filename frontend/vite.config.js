@@ -3,10 +3,14 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  server:{
+  server: {
     proxy: {
-      "/api": "https://bookstoreapp-backend-bag4.onrender.com",
-    }
-  },
+    '/api': {
+    target: 'https://bookstoreapp-backend-bag4.onrender.com',
+    changeOrigin: true,
+    rewrite: (path) => path.replace(/^\/api/, ''),
+    },
+    },
+    },
   plugins: [react()],
 })
