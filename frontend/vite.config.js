@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
     '/api': {
-    target: 'https://bookstoreapp-backend-bag4.onrender.com',
+    target: 'http://localhost:4001',
     changeOrigin: true,
     rewrite: (path) => path.replace(/^\/api/, ''),
     },
