@@ -17,7 +17,6 @@ function Freebook() {
         setBook(data)
       } catch (error) {
         console.log(error);
-        
       }
     }
     getBook();
@@ -69,7 +68,7 @@ function Freebook() {
       <div className="slider-container ">
         <Slider {...settings}>
           {book.map((item) => (
-            <Cards item = {item} key={item.id}/>
+            <Cards item = {item} key={item._id}/>
           ))}
         </Slider>
     </div>

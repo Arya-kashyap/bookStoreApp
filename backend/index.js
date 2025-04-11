@@ -32,9 +32,6 @@ try {
 app.use("/book", bookRouter);
 app.use("/user", userRoute);
 
-app.get('/', (req, res) => {
-     res.send("GET Request Called")
-     })
 
 app.listen(PORT, () => {
      console.log(`Server started on Port ${PORT}`)

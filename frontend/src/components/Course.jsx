@@ -9,12 +9,12 @@ function Course() {
     const  getBook = async() => {
       try {
         const res = await axios.get("/api/book");
+        console.log(res.data)
         setBook(res.data)
       } catch (error) {
         console.log(error);
-        
       }
-    }
+    };
     getBook();
   },[])
   return (
@@ -30,7 +30,7 @@ function Course() {
         <div className='mt-12 grid grid-cols-1 md:grid-cols-4 '>
           {
             book.map((item) => (
-              <Cards item={item} key={item.id}/>
+              <Cards item={item} key={item._id}/>
             ))
           }
         </div>

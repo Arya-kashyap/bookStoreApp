@@ -10,8 +10,8 @@ export const signup = async (req, res) => {
           }
           const hashPassword = await bcryptjs.hash(password,10);
           const createdUser = new User({
-               fullname,
-               email,
+               fullname: fullname,
+               email: email,
                password: hashPassword,
           });
           await createdUser.save();

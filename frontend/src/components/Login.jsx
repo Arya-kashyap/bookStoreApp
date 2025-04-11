@@ -23,8 +23,8 @@ function Login() {
                     toast.success("login successfully")
                     document.getElementById("my_modal_3").close()
                     window.location.reload()
+                    localStorage.setItem("Users", JSON.stringify(res.data.user))
                }
-               localStorage.setItem("Users", JSON.stringify(res.data.user))
           }).catch((err) => {
                if(err.response){
                     console.log(err);
