@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
     '/api': {
-    target: 'http://localhost:4001',
+    target: 'https://book-store-backend-pink-seven.vercel.app',
     changeOrigin: true,
     rewrite: (path) => path.replace(/^\/api/, ''),
     },
